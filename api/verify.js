@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
-// ⚠️ THESE ARE THE MISSING LINES! (Make sure they are on lines 3 and 4)
 const supabase = createClient('https://your-project-id.supabase.co', 'your-long-service-role-secret-key');
+
 export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
 // ... the rest of your code continues below ...
