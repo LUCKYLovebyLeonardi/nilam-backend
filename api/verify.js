@@ -1,6 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient('https://your-project-id.supabase.co', 'your-long-service-role-secret-key-here');
+// Make sure you replace the placeholders below with your actual project credentials!
+const supabase = createClient('https://your-actual-project-id.supabase.co', 'your-actual-service-role-secret-key');
 
 export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
