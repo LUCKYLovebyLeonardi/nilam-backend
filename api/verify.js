@@ -1,7 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Make sure you replace the placeholders below with your actual project credentials!
-const supabase = createClient('https://PASTE_YOUR_PROJECT_URL_HERE.supabase.co', 'PASTE_YOUR_SERVICE_ROLE_SECRET_KEY_HERE');
+// Vercel will inject these secretly at runtime from your environment settings
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY);
+
 export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
 // ... the rest of your code continues below ...
